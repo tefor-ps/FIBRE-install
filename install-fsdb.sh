@@ -16,7 +16,8 @@ if [[ -d $1 ]]; then
 	setpath=1
 fi
 
-cd /tmp/ 
+TMP=$(mktemp -d)
+cd $TMP
 wget https://gitlab.com/tefor/fsdb-core/-/raw/main/install/initializeFsdb.sh
 
 if [[ $setpath -eq 0 ]]; then
@@ -24,3 +25,5 @@ if [[ $setpath -eq 0 ]]; then
 else
 	sudo bash initializeFsdb.sh $defaultInstDir
 fi
+
+rm -rf $TMP
