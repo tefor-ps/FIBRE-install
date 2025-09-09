@@ -18,7 +18,7 @@ fi
 
 TMP=$(mktemp -d)
 cd $TMP
-wget https://gitlab.com/tefor/fsdb-core/-/raw/main/install/initializeFsdb.sh
+wget https://gitlab.com/tefor/fsdb-core/-/raw/stable/install/initializeFsdb.sh
 
 if [[ $setpath -eq 0 ]]; then
 	sudo bash initializeFsdb.sh
