@@ -2,7 +2,7 @@
 
 <<README
 This script initiates the installation of the fsdb.
-more infos on the fsdb at https://gitlab.com/tefor.
+More information on the fsdb at https://gitlab.com/tefor.
 
 PARAMETERS
 This script (optionlally) accepts the installation directory as first and only parameter ($1). 
