@@ -8,9 +8,13 @@ This project conains a single bash script: install-fsdb.sh , which does nothing 
 ```
 #!/bin/bash
 
-cd /tmp/ 
-wget https://gitlab.com/arnimjenett/fsdb23/-/raw/main/install/initializeFsdb.sh
+TMP=$(mktemp -d)
+cd $TMP
+wget https://gitlab.com/tefor/fsdb-core/-/raw/stable/install/initializeFsdb.sh
+
 sudo bash initializeFsdb.sh
+
+rm -rf $TMP
 ```
 
 The easiest way to install the fsdb therefore is to clone this repo and run the contained script.
