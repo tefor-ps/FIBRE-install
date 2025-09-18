@@ -22,7 +22,8 @@ cd $TMP
 repo=https://gitlab.com/tefor/fsdb-core.git
 printf "\nWelcome to the installer of the file system based database (fsdb).
 \t- Step 1: Cloning the latest version of the fsdb from $repo to temporary directory $INITDIR/ \n" 
-git clone --depth 1 -b stable $repo
+#git clone --depth 1 -b stable $repo
+git clone --depth 1 -b main $repo
 
 if [[ $? -gt 0 ]]; then 
 	fail "Can't clone fsdb from $repo."
