@@ -32,7 +32,7 @@ else
 fi
 INIT=$(find $(realpath ./$repoName) -name "initializeFsdb.sh")
 
-printf "The following steps need to be executed as super-user (sudo). Please type the corresponding password below.\n"
+printf "\nThe following steps need to be executed as super-user (sudo). Please type the corresponding password below.\n"
 if [[ $setpath -eq 0 ]]; then
 	sudo bash $INIT
 else
