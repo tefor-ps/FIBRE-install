@@ -9,6 +9,8 @@ This script (optionlally) accepts the installation directory as first and only p
 
 README
 
+#TODO: fix README.md
+
 # define final installation directory
 setpath=0
 if [[ -d $1 ]]; then
