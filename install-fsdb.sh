@@ -10,6 +10,7 @@ This script (optionlally) accepts the installation directory as first and only p
 README
 
 #TODO: fix README.md
+#TODO: nice-to-have: step counting and cyan messages
 
 # define final installation directory
 setpath=0
@@ -18,6 +19,9 @@ if [[ -d $1 ]]; then
 	setpath=1
 fi
 
+# create temporary location for the installation.
+# The fsdb will be 'build' within this location and lateron copied/moved into 
+# its final location
 TMP=$(mktemp -d)
 cd $TMP
 
@@ -26,6 +30,12 @@ printf "\nWelcome to the installer of the file system based database (fsdb).
 \t- Step 1: Cloning the latest version of the fsdb from $repo to temporary directory $INITDIR/ \n" 
 #git clone --depth 1 -b stable $repo
 git clone --depth 1 -b main $repo
+
+
+#get fsdb-version-number
+FSDBVERSION=$(grep FSDBVERSION $(find $TMP -name "fsdb.config") |cut -d " " -f 2)
+mkdir $TMP/$FSDBVERSION
+mv $(ls  |grep -v $FSDBVERSION) $FSDBVERSION
 
 if [[ $? -gt 0 ]]; then 
 	fail "Can't clone fsdb from $repo."
