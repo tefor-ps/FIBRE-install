@@ -12,6 +12,9 @@ README
 #TODO: fix README.md
 #TODO: nice-to-have: step counting and cyan messages
 
+# cyan text on black background to introduce the current script or say something important
+intro() { if [[ -t 2 ]] ; then printf $'\r\e[2K\t\e[36;1m'"$@"$'\e[0m\n'; else echo "$@"; fi >&2 ;}
+
 # define final installation directory
 setpath=0
 if [[ -d $1 ]]; then
@@ -26,7 +29,7 @@ TMP=$(mktemp -d)
 cd $TMP
 
 repo=https://gitlab.com/tefor/fsdb-core.git
-printf "\nWelcome to the installer of the file system based database (fsdb).
+intro "\nWelcome to the installer of the file system based database (fsdb).
 \t- Step 1: Cloning the latest version of the fsdb from $repo to temporary directory $TMP/ \n" 
 #git clone --depth 1 -b stable $repo
 git clone --depth 1 -b main $repo
@@ -45,7 +48,7 @@ else
 fi
 INIT=$(find $(realpath ./$repoName) -name "initializeFsdb.sh")
 
-printf "\nThe following steps need to be executed as super-user (sudo). Please type the corresponding password below.\n"
+intro "\nThe following steps need to be executed as super-user (sudo). Please type the corresponding password below.\n"
 if [[ $setpath -eq 0 ]]; then
 	sudo bash $INIT
 else
