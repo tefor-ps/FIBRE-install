@@ -30,7 +30,8 @@ cd $TMP
 
 repo=https://gitlab.com/tefor/fsdb-core.git
 intro "\nWelcome to the installer of the file system based database (fsdb).
-\t- Step 1: Cloning the latest version of the fsdb from $repo 
+\t- Step 1: Cloning the latest version of the fsdb 
+\tfrom $repo 
 \tto the temporary directory $TMP/ \n" 
 #git clone --depth 1 -b stable $repo
 git clone --depth 1 -b main $repo
