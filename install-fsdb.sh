@@ -31,8 +31,8 @@ cd $TMP
 repo=https://gitlab.com/tefor/fsdb-core.git
 intro "\nWelcome to the installer of the file system based database (fsdb).
 \t- Step 1: Cloning the latest version of the fsdb 
-\tfrom $repo 
-\tto the temporary directory $TMP/ \n" 
+\t  from $repo 
+\t  to the temporary directory $TMP/ \n" 
 #git clone --depth 1 -b stable $repo
 git clone --depth 1 -b main $repo
 
@@ -50,7 +50,8 @@ else
 fi
 INIT=$(find $(realpath ./$repoName) -name "initializeFsdb.sh")
 
-intro "\nThe following steps need to be executed as super-user (sudo). Please type the corresponding password below.\n"
+intro "\n\tThe following steps need to be executed as super-user (sudo). 
+\tPlease type the corresponding password below.\n"
 if [[ $setpath -eq 0 ]]; then
 	sudo bash $INIT
 else
