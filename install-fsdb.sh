@@ -27,14 +27,16 @@ cd $TMP
 
 repo=https://gitlab.com/tefor/fsdb-core.git
 printf "\nWelcome to the installer of the file system based database (fsdb).
-\t- Step 1: Cloning the latest version of the fsdb from $repo to temporary directory $INITDIR/ \n" 
+\t- Step 1: Cloning the latest version of the fsdb from $repo to temporary directory $TMP/ \n" 
 #git clone --depth 1 -b stable $repo
 git clone --depth 1 -b main $repo
 
-
 #get fsdb-version-number
 FSDBVERSION=$(grep FSDBVERSION $(find $TMP -name "fsdb.config") |cut -d " " -f 2)
-mkdir $TMP/$FSDBVERSION
+echo $FSDBVERSION
+read ans
+
+mkdir -pv $TMP/$FSDBVERSION
 mv $(ls  |grep -v $FSDBVERSION) $FSDBVERSION
 
 if [[ $? -gt 0 ]]; then 
