@@ -32,9 +32,8 @@ printf "\nWelcome to the installer of the file system based database (fsdb).
 git clone --depth 1 -b main $repo
 
 #get fsdb-version-number
-FSDBVERSION=$(grep FSDBVERSION $(find $TMP -name "fsdb.config") |cut -d " " -f 2)
+FSDBVERSION=$(grep FSDBVERSION $(find . -name "fsdb.config*" |tail -1) |cut -d " " -f 2 |awk '{print $1}')
 echo $FSDBVERSION
-read ans
 
 mkdir -pv $TMP/$FSDBVERSION
 mv $(ls  |grep -v $FSDBVERSION) $FSDBVERSION
