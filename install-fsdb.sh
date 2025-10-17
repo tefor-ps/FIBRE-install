@@ -20,6 +20,9 @@ setpath=0
 if [[ -d $1 ]]; then
 	defaultInstDir=$(realpath $1)
 	setpath=1
+else
+	defaultInstDir=$HOME
+	setpath=1
 fi
 
 # create temporary location for the installation.
