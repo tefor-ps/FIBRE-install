@@ -41,9 +41,9 @@ git clone --depth 1 -b main $repo
 
 #get fsdb-version-number
 FSDBVERSION=$(grep FSDBVERSION $(find . -name "fsdb.config*" |tail -1) |cut -d " " -f 2 |awk '{print $1}')
-echo $FSDBVERSION
+intro "Detected ${FSDBVERSION}."
 
-mkdir -pv $TMP/$FSDBVERSION
+mkdir -p $TMP/$FSDBVERSION
 mv $(ls  |grep -v $FSDBVERSION) $FSDBVERSION
 
 if [[ $? -gt 0 ]]; then 
