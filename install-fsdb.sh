@@ -61,4 +61,4 @@ else
 	sudo bash $INIT $defaultInstDir
 fi
 
-sudo rm -rfv $TMP
+sudo rm -rf $TMP
