@@ -65,7 +65,7 @@ The modular architecture of the fsdb allows for modul-specific configuration at 
 [variable-name] [varialbel-value] 
 ```
 Between [variable-name] and [varialbel-value] the fsdb expects a single white-space. \
-The fsdb accepts one comment, lead by '#', per line in the config-files. This can be used to annotated entries, e.g., 
+The fsdb accepts one comment, lead by '#', per line in the config-files. This can be used to annotate entries, e.g., 
 ```
 [variable-name] [varialbel-value] # [comment]
 ```
