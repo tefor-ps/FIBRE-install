@@ -6,7 +6,7 @@ We are offering two methods for the installation of the fsdb. Both are guiding y
 
 The easiest for a stright-forward (de-novo) installation of the fsdb is to clone the repository fsdb-install and run the fsdb-install.sh
 ```
-[git clone  https://gitlab.com/arnimjenett/fsdb-install/-/tree/main](https://gitlab.com/arnimjenett/fsdb-install/-/tree/main)
+git clone https://gitlab.com/arnimjenett/fsdb-install/-/tree/main
 cd ./fsdb-install
 sudo bash fsdb-install.sh
 ```
