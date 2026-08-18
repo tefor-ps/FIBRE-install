@@ -27,7 +27,7 @@ This will update the scripts of fsdb (from its [gitlab repo](https://gitlab.com/
 
 While the fsdb is meant to run in the background (non-interactive) on a Linux server it can - with some limitation - also be run in the 'Windows Subsystem for Linux' (wsl2).
 
-## preparation of the image acquisition systems (IAS)
+## Preparation of the image acquisition systems (IAS)
 
 The image acquisition systems (IAS), serviced by the fsdb need to make the storage location of the images for the fsdb accessible to the fsdb-server. As most IAS run windows as operating system please refer to the microsoft article [File sharing over a network in Windows](https://support.microsoft.com/en-us/windows/file-sharing-over-a-network-in-windows-b58704b2-f53a-4b82-7bc1-80f9994725bf#ID0EBD&ID0EBD) for the details. For security reasons we suggest to share access to this directory exclusivly with an account you create for this task on the IAS (e.g., fsdbrobot).    
 The following information of the IAS will be needed during the setup of the fsdb to facilitate the automatic file transfer:
@@ -36,7 +36,7 @@ The following information of the IAS will be needed during the setup of the fsdb
 - name of the account used to access above shared directory
 - password of above acount
 
-### file sharing for the fsdb 
+### File sharing for the fsdb 
 
 On your IAS 
 - create a new account to use for the file sharing. 
@@ -60,3 +60,16 @@ IAS (computer)
 (**) 
 
 ## Configuration of the fsdb
+The modular architecture of the fsdb allows for modul-specific configuration at any time. Each module comes with its own configuration file, which is managing the functionalities performed by this module. The configuration files are simple flat text files with the following structure:
+```
+[variable-name] [varialbel-value] 
+```
+Between [variable-name] and [varialbel-value] the fsdb expects a single white-space. 
+The fsdb accepts one comment, lead by '#', per line in the config-files. This can be used to annotated entries, e.g., 
+```
+[variable-name] [varialbel-value] # [comment]
+```
+or to temporarily silence an entry without losing it completely, as in 
+```
+#[variable-name] [varialbel-value]
+```
