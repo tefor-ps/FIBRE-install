@@ -9,9 +9,6 @@ This script (optionlally) accepts the installation directory as first and only p
 
 README
 
-#TODO: fix README.md
-#TODO: nice-to-have: step counting and cyan messages
-
 # cyan text on black background to introduce the current script or say something important
 intro() { if [[ -t 2 ]] ; then printf $'\r\e[2K\t\e[36;1m'"$@"$'\e[0m\n'; else echo "$@"; fi >&2 ;}
 
