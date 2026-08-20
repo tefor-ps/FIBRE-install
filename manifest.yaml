@@ -3,7 +3,7 @@ version: 1.5.0
 modules:
   install:
     repository: https://gitlab.com/tefor/fsdb/fsdb-install.git
-    version: v2.26.0
+    version: v2.26.1
     optional: false
 
   core:
