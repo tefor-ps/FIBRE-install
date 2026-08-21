@@ -1,40 +1,48 @@
+schema: 1
 version: v2.26.0
 
 modules:
   install:
     repository: https://gitlab.com/tefor/fsdb/fsdb-install.git
     version: v2.26.1
+    directory: fsdb-install
     optional: false
 
   core:
     repository: https://gitlab.com/tefor/fsdb/fsdb-core.git
     version: v2.26.1
+    directory: fsdb-core
     optional: false
 
   janitor:
     repository: https://gitlab.com/tefor/fsdb/fsdb-janitor.git
     version: v2.26.1
+    directory: fsdb-janitor
     optional: false
     
   sdg:
     repository: https://gitlab.com/tefor/fsdb/fsdb-sdg.git
     version: v2.26.1
+    directory: fsdb-sdg
     optional: false
     
     
   drive-connector:
     repository: https://gitlab.com/tefor/fsdb/driveconnector.git
     version: v1.0.0
+    directory: fsdb-dc
     optional: true
 
 # Planned for a later release:
 #  archiver:
 #    repository: https://gitlab.com/tefor/fsdb/fsdb-archiver.git
 #    version: v1.4.0
+#    directory: fsdb-archiver
 #    optional: true
 
 #  reg:
 #    repository: https://gitlab.com/tefor/fsdb/fsdb-registration.git
 #    version: v1.4.0
+#    directory: fsdb-reg
 #    optional: true
 
