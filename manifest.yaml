@@ -4,7 +4,7 @@ version: v2.26.0
 modules:
   install:
     repository: https://gitlab.com/tefor/fsdb/fsdb-install.git
-    version: v2.26.1
+    version: v2.26.2
     directory: fsdb-install
     optional: false
 
