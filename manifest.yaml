@@ -10,7 +10,7 @@ modules:
 
   core:
     repository: https://gitlab.com/tefor/fsdb/fsdb-core.git
-    version: v2.26.1
+    version: v2.26.2
     directory: fsdb-core
     optional: false
 
@@ -22,7 +22,7 @@ modules:
     
   sdg:
     repository: https://gitlab.com/tefor/fsdb/fsdb-sdg.git
-    version: v2.26.1
+    version: v2.26.2
     directory: fsdb-sdg
     optional: false
     
