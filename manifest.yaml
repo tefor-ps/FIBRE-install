@@ -22,7 +22,7 @@ modules:
     
   sdg:
     repository: https://gitlab.com/tefor/fsdb/fsdb-sdg.git
-    version: v2.26.3
+    version: v2.26.4
     directory: fsdb-sdg
     optional: false
     
