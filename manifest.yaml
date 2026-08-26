@@ -4,13 +4,13 @@ version: v2.26.0
 modules:
   install:
     repository: https://gitlab.com/tefor/fsdb/fsdb-install.git
-    version: v2.26.5
+    version: v2.26.6
     directory: fsdb-install
     optional: false
 
   core:
     repository: https://gitlab.com/tefor/fsdb/fsdb-core.git
-    version: v2.26.5
+    version: v2.26.6
     directory: fsdb-core
     optional: false
 
@@ -22,7 +22,7 @@ modules:
     
   sdg:
     repository: https://gitlab.com/tefor/fsdb/fsdb-sdg.git
-    version: v2.26.2
+    version: v2.26.3
     directory: fsdb-sdg
     optional: false
     
